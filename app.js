@@ -1,11 +1,12 @@
+const express = require("express");
+const app = express();
 
-const http = require("http");
+const mainRoutes = require("./src/routes/mainRoutes");
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ message: "My first backend project is running!" }));
-});
+app.use("/", mainRoutes);
 
-server.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
