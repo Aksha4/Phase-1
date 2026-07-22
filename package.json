@@ -1,0 +1,17 @@
+{
+  "name": "week1-project",
+  "version": "1.0.0",
+  "description": "Backend Development Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
