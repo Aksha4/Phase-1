@@ -1,143 +1,142 @@
-# Phase-1 Backend Project
+# Week 3 Backend Development Project
 
-A beginner-friendly backend project built using Node.js and Express.js as part of the Data Analysis / Backend Development training program.
+## Overview
+
+This project is part of my Backend Development learning journey. It is built using Node.js and Express and demonstrates routing, controllers, environment variables, request logging, and a health check endpoint.
+
+---
 
 ## Features
 
 - Express.js web server
-- Modular routing
-- Controller-based architecture
-- REST API endpoints
-- Jest unit testing
-- Git version control
+- MVC-style folder structure
+- Routing using Express Router
+- Controllers for request handling
+- Environment variables using dotenv
+- Request logging middleware
+- Health check endpoint
+- Basic API endpoints
+
+---
 
 ## Project Structure
 
-```text
-Phase-1/
-│
-├── app.js
-├── package.json
-├── package-lock.json
-├── README.md
+```
+week1-project/
 │
 ├── src/
 │   ├── controllers/
 │   │   └── mainController.js
-│   │
 │   └── routes/
 │       └── mainRoutes.js
 │
 ├── tests/
-│   └── app.test.js
+├── .env
+├── app.js
+├── package.json
+└── README.md
 ```
+
+---
 
 ## Installation
 
-1. Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/Aksha4/Phase-1.git
 ```
 
-2. Navigate to the project folder
+Move into the project folder:
 
 ```bash
 cd Phase-1
 ```
 
-3. Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Running the Application
+---
 
-Start the server:
+## Run the Application
 
 ```bash
 node app.js
 ```
 
-The application will run on:
+Server runs at:
 
-```text
+```
 http://localhost:3000
 ```
 
-## Available Endpoints
+---
 
-### Home
+## API Endpoints
 
-```http
-GET /
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/` | Home page |
+| GET | `/about` | About page |
+| GET | `/contact` | Contact page |
+| GET | `/health` | Health status |
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the project root.
+
+Example:
+
+```
+PORT=3000
+APP_NAME=Week1 Backend Project
+APP_VERSION=1.0.0
 ```
 
-Response:
-
-```json
-{
-  "message": "Week 2 API is running!"
-}
-```
-
-### About
-
-```http
-GET /about
-```
-
-Response:
-
-```json
-{
-  "name": "Akshay",
-  "course": "Backend Development"
-}
-```
-
-### Contact
-
-```http
-GET /contact
-```
-
-Response:
-
-```json
-{
-  "email": "akshay@example.com",
-  "phone": "1234567890"
-}
-```
-
-## Running Tests
-
-Execute Jest tests:
-
-```bash
-npm test
-```
-
-Expected output:
-
-```text
-PASS tests/app.test.js
-```
+---
 
 ## Technologies Used
 
 - Node.js
 - Express.js
+- dotenv
 - Git
 - GitHub
 - Jest
 
-## Author
+---
 
-Akshay
+## Testing
+
+Run tests using:
+
+```bash
+npm test
+```
+
+---
+
+## Week 3 Achievements
+
+- Configured dotenv
+- Added environment variables
+- Implemented request logging middleware
+- Created `/health` endpoint
+- Successfully tested all routes
+
+---
 
 ## GitHub Repository
 
 https://github.com/Aksha4/Phase-1
+
+---
+
+## Author
+
+**Akshay**
