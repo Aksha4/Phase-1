@@ -1,142 +1,78 @@
-# Week 3 Backend Development Project
+# Backend Development Project
 
 ## Overview
 
-This project is part of my Backend Development learning journey. It is built using Node.js and Express and demonstrates routing, controllers, environment variables, request logging, and a health check endpoint.
-
----
+This project is a Node.js and Express backend application developed as part of the backend development syllabus.
 
 ## Features
 
-- Express.js web server
-- MVC-style folder structure
-- Routing using Express Router
-- Controllers for request handling
+- Express.js server
+- SQLite database
+- User registration
+- User login
+- Password hashing with bcryptjs
+- JWT authentication
+- Protected API routes
+- Request logging
 - Environment variables using dotenv
-- Request logging middleware
-- Health check endpoint
-- Basic API endpoints
-
----
-
-## Project Structure
-
-```
-week1-project/
-│
-├── src/
-│   ├── controllers/
-│   │   └── mainController.js
-│   └── routes/
-│       └── mainRoutes.js
-│
-├── tests/
-├── .env
-├── app.js
-├── package.json
-└── README.md
-```
-
----
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Aksha4/Phase-1.git
-```
-
-Move into the project folder:
-
-```bash
-cd Phase-1
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
----
-
-## Run the Application
-
-```bash
-node app.js
-```
-
-Server runs at:
-
-```
-http://localhost:3000
-```
-
----
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | `/` | Home page |
-| GET | `/about` | About page |
-| GET | `/contact` | Contact page |
-| GET | `/health` | Health status |
-
----
-
-## Environment Variables
-
-Create a `.env` file in the project root.
-
-Example:
-
-```
-PORT=3000
-APP_NAME=Week1 Backend Project
-APP_VERSION=1.0.0
-```
-
----
 
 ## Technologies Used
 
 - Node.js
 - Express.js
+- SQLite3
+- bcryptjs
+- jsonwebtoken
 - dotenv
-- Git
-- GitHub
-- Jest
 
----
+## Installation
 
-## Testing
-
-Run tests using:
+1. Clone the repository.
+2. Install dependencies:
 
 ```bash
-npm test
+npm install
 ```
 
----
+3. Create a `.env` file:
 
-## Week 3 Achievements
+```env
+PORT=3000
+JWT_SECRET=your_secret_key
+```
 
-- Configured dotenv
-- Added environment variables
-- Implemented request logging middleware
-- Created `/health` endpoint
-- Successfully tested all routes
+4. Run the migration:
 
----
+```bash
+node src/migrations/migrate.js
+```
 
-## GitHub Repository
+5. Start the server:
 
-https://github.com/Aksha4/Phase-1
+```bash
+node app.js
+```
 
----
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | / | Home |
+| GET | /about | About |
+| GET | /contact | Contact |
+| GET | /health | Health Check |
+| POST | /api/auth/register | Register User |
+| POST | /api/auth/login | Login User |
+| GET | /api/auth/profile | Protected Profile |
+
+## Authentication
+
+Protected endpoints require an Authorization header:
+
+```
+Authorization: Bearer <JWT_TOKEN>
+```
 
 ## Author
 
-**Akshay**
+Akshay
